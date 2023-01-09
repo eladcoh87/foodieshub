@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import './MainSection.scss';
 import { Container } from '@mui/material';
-import './MainSection.scss';
+
 import InputSearch from './InputSearch/InputSearch';
 import PreviousSearch from './PreviousSearch/PreviousSearch';
 import CardGrid from './CardGrid/CardGrid';
-import ImageSection from './ImageSection';
-import RecpieInfo from './RecpieInfo';
+import ImageSection from './ImageSection/ImageSection';
+import RecpieInfo from './RecpieInfo/RecpieInfo';
 import { useDispatch, useSelector } from 'react-redux';
 import CircularProgress from '@mui/material/CircularProgress';
 import { getRecipeAction, setCopyRecipesList, setIsLoadingAction } from '../../store/actions';

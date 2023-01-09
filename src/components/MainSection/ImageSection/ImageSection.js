@@ -2,9 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import './ImageSection.scss';
 import { useState } from 'react';
-import ImageModal from './ImageModal';
-import ReactDOM from 'react-dom';
-import BasicModal from './BasicModal';
+import BasicModal from './BasicModal/BasicModal';
 
 const ImageSection = () => {
   const [openModal, setOpenModal] = useState(false);
