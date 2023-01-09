@@ -1,24 +1,23 @@
 .footerContainer{
 
 border-top: 2px solid #9c27b0;
-background-color: 
-#f2f2f2 ;
+background: rgba(0,0,0,.05);
+
 
 height: 25rem;
 
 h2 {
-        text-align: center;
-        padding-top: 10px;
+   text-align: center;
+    padding-top: 20px;
     color: #FF69B4
 }
 
 a{
 
-color: white;
+color: rgba(0,0,0,.95);
 text-decoration: none;
-background-color:#9b27b0bd;
-border-radius: 16px;
-padding: 10px 20px;
+font-size: 0.7rem;
+
 
 &:hover{
 
@@ -33,9 +32,9 @@ background-color:#9b27b0ec ;
             color: white;
 
         h3{
-            margin-bottom: 2rem;
+            margin-bottom: 1.7rem;
             color: black;
-            letter-spacing: 0.3rem;
+            
         }
         ul{
             list-style: none;
@@ -44,7 +43,7 @@ background-color:#9b27b0ec ;
         }
 
         li {
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
 
 
