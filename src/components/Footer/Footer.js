@@ -10,6 +10,9 @@ const Footer = () => {
    
       <Container className="footerContainer" maxWidth="xl">
       
+
+
+ <div><h2>FoodiesHub</h2></div>     
 <Grid className='gridContainer' container spacing={2}>
 
 <Grid className='gridItem' container item xs={4}  justifyContent="center"

@@ -1,9 +1,16 @@
 .footerContainer{
 
-border-top: 6px solid #9c27b0;
+border-top: 2px solid #9c27b0;
+background-color: 
+#f2f2f2 ;
 
+height: 25rem;
 
-height: 20rem;
+h2 {
+        text-align: center;
+        padding-top: 10px;
+    color: #FF69B4
+}
 
 a{
 
@@ -13,6 +20,11 @@ background-color:#9b27b0bd;
 border-radius: 16px;
 padding: 10px 20px;
 
+&:hover{
+
+background-color:#9b27b0ec ;
+
+}
 }
 
     .gridContainer{
@@ -22,7 +34,8 @@ padding: 10px 20px;
 
         h3{
             margin-bottom: 2rem;
-            color: #ff69b4;
+            color: black;
+            letter-spacing: 0.3rem;
         }
         ul{
             list-style: none;
