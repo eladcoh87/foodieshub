@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 
 import {getRecipesApi} from '../../../apis/apis'
-import {addToLastSearch, getRecipeAction,setCopyRecipesList} from '../../../store/actions'
+import {addToLastSearch, getRecipeAction,setOriginalRecipes} from '../../../store/actions'
 import './InputSearch.scss'
 import { useDispatch } from 'react-redux';
 
@@ -51,16 +51,11 @@ recipeList.then(recipes => {
 
   console.log(recipeList,'come from input search');
 
-
-  
-
-
   
   dispatch(getRecipeAction(recipeList))
-  dispatch(setCopyRecipesList(recipeList))
-  
+  dispatch(setOriginalRecipes(recipeList))
 
-  console.log(123);
+
 
 
 }).catch(error => {

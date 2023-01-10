@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const getRecipeAction = (recpies) => {
   return {
     type: 'GET_RECPIES',
@@ -14,19 +12,14 @@ export const setIsLoadingAction = (flag) => {
   };
 };
 
-export const setChoosenProduct = (id) => {
+export const setChoosenRecipe = (id) => {
   return {
     type: 'SET_PRODUCT',
     payload: id,
   };
 };
 
-export const setCopyRecipesList = (recpies) => {
-  return {
-    type: 'SET_COPY_RECIPES',
-    payload: recpies,
-  };
-};
+
 
 export const addToLastSearch = (id) => {
   return {
@@ -35,3 +28,10 @@ export const addToLastSearch = (id) => {
   };
 };
 
+
+export const setOriginalRecipes = (recpies) => {
+  return {
+    type: 'SET_ORIGINAL_RECIPE',
+    payload: recpies,
+  };
+};

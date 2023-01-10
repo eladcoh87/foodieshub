@@ -2,7 +2,7 @@ import { Button } from '@mui/material'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { getRecipesApi } from '../../../../apis/apis'
-import { getRecipeAction, setCopyRecipesList } from '../../../../store/actions'
+import { getRecipeAction} from '../../../../store/actions'
 import './PreviousSearchItem.scss'
 
 
@@ -35,7 +35,6 @@ const handleOnClick = (event) => {
   
     
     dispatch(getRecipeAction(recipeList))
-    dispatch(setCopyRecipesList(recipeList))
     
   
   
