@@ -1,12 +1,17 @@
 
 
-export const getRecipesApi = async (SearchParams) => {
+export const getRecipesApi = async (searchTerm) => {
 
-  
-        const params = new URLSearchParams({q:SearchParams.keyword,type:'public'})
+      console.log(searchTerm);
+      
+        const queryParams = new URLSearchParams({q:searchTerm,type:'public'})
+
+
 
         try {
-        const response = await fetch(`https://api.edamam.com/api/recipes/v2?app_id=af3e752e&app_key=63f200a55485807bd91f316cbccc48dd&${params}`)
+
+
+        const response = await fetch(`https://api.edamam.com/api/recipes/v2?app_id=af3e752e&app_key=63f200a55485807bd91f316cbccc48dd&${queryParams}`)
         
                 console.log(response);
 

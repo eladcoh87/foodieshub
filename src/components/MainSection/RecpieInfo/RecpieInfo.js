@@ -1,43 +1,29 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import './recpieInfo.scss'
-
-
-
+import React from 'react';
+import { useSelector } from 'react-redux';
+import './recpieInfo.scss';
 
 const RecpieInfo = () => {
 
-const recipe =  useSelector((state => state.choosenRecipe));
+  
+  const recipe = useSelector((state) => state.choosenRecipe);
 
-if (!recipe) {
-
-  return
-}
-
-
-
+  if (!recipe) {
+    return;
+  }
 
   return (
-
-
-
-    <div className='recipeinfoConatiner'>
+    <div className="recipeinfoConatiner">
       <h2>{recipe.label}</h2>
-      
+
       <h3>ingrdeint</h3>
 
       <ul>
-
-    {recipe.ingredientLines.map((ingredeintLine => <li key={ingredeintLine}>{ingredeintLine}</li>))}
-
+        {recipe.ingredientLines.map((ingredeintLine) => (
+          <li key={ingredeintLine}>{ingredeintLine}</li>
+        ))}
       </ul>
-      
-      
-      </div>
+    </div>
+  );
+};
 
-
-
-  )
-}
-
-export default RecpieInfo
+export default RecpieInfo;

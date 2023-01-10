@@ -8,8 +8,9 @@ import './InputSearch.scss'
 import { useDispatch } from 'react-redux';
 
 const InputSearch = () => {
-const [value,setValue]  = useState('')
 
+
+const [value,setValue]  = useState('')
 
 
  const dispatch = useDispatch();
@@ -31,12 +32,13 @@ dispatch(addToLastSearch(value))
 
 // const SearchParams = new URLSearchParams({q:value,type:'public'})
 
-const SearchParams = {keyword:value}
-const recipeList = getRecipesApi(SearchParams);
+
+const recipeList = getRecipesApi(value);
 
 setValue('')
 
 recipeList.then(recipes => {
+  
   
   if(!recipes) {
 
@@ -47,10 +49,10 @@ recipeList.then(recipes => {
 
   const recipeList = recipes.map((recpieItem => recpieItem.recipe ))
 
-  console.log(recipeList);
+  console.log(recipeList,'come from input search');
 
 
-    console.log(recipes);
+  
 
 
   
@@ -78,7 +80,7 @@ recipeList.then(recipes => {
 
 
     <div className='InputTextContainer'>
-        <TextField value={value} onChange={handleOnChange} id="outlined-basic" label="search recipe..." variant="outlined" />
+        <TextField  value={value} onChange={handleOnChange} id="outlined-basic" label="search recipe..." variant="outlined" />
 
         <Button onClick={handleOnClick} color="secondary" className='search-btn' size="small" variant="contained" endIcon={<SearchIcon />}>
   

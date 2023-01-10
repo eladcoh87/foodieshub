@@ -1,17 +1,13 @@
 import React, { useEffect } from 'react';
 import './MainSection.scss';
-import { Container } from '@mui/material';
-
+import { CircularProgress, Container } from '@mui/material';
 import InputSearch from './InputSearch/InputSearch';
 import PreviousSearch from './PreviousSearch/PreviousSearch';
-import CardGrid from './CardGrid/CardGrid';
-import ImageSection from './ImageSection/ImageSection';
-import RecpieInfo from './RecpieInfo/RecpieInfo';
 import { useDispatch, useSelector } from 'react-redux';
-import CircularProgress from '@mui/material/CircularProgress';
 import { getRecipeAction, setCopyRecipesList, setIsLoadingAction } from '../../store/actions';
 import { getRecipesApi } from '../../apis/apis';
 import FilterAndSort from './FilterAndSort/FilterAndSort';
+import RecipesSection from './RecipesSection/RecipesSection';
 
 const MainSection = () => {
   const dispatch = useDispatch();
@@ -21,7 +17,7 @@ const MainSection = () => {
 
   useEffect(() => {
 
-    const defaultSearch = {keyword:'pizza'}
+    const defaultSearch = 'pizza'
     const recipeList = getRecipesApi(defaultSearch);
 
     recipeList
@@ -29,10 +25,7 @@ const MainSection = () => {
         if (!recipes) {
           throw new Error('somtinhg went wrong!!');
         }
-
         const recipeList = recipes.map((recpieItem) => recpieItem.recipe);
-
-
 
         dispatch(getRecipeAction(recipeList));
         dispatch(setCopyRecipesList(recipeList))
@@ -57,11 +50,8 @@ const MainSection = () => {
           <CircularProgress />{' '}
         </div>
       )}
-      <div className="InfoContainer">
-        <CardGrid />
-        <ImageSection />
-        <RecpieInfo />
-      </div>
+<RecipesSection />
+
     </Container>
   );
 };

@@ -9,9 +9,9 @@ const recipeReducer = (state = initialState,action) => {
 switch (action.type) {
 
 case "GET_RECPIES":
-      
-const recpiesList = action.payload;
-const choosenRecipe = recpiesList[0];
+   
+const recpiesList = [...action.payload];
+const choosenRecipe = {...recpiesList[0]};
 console.log(recpiesList);
 return {...state,recpiesList,choosenRecipe}
 
