@@ -1,19 +1,13 @@
 .imageContainer {
+  width: 35%;
 
-width: 35%;
+  img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 60px;
 
-img {
-
-width: 100%;
-object-fit: contain;
-border-radius: 60px;
-
-
-&:hover{
-
-cursor: pointer;
-
-}
-}
-
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

@@ -14,15 +14,12 @@ import FilterAndSort from './FilterAndSort/FilterAndSort';
 import RecipesSection from './RecipesSection/RecipesSection';
 
 const MainSection = () => {
-
   const dispatch = useDispatch();
-  const {isLoading} = useSelector((state) => state);
-
+  const { isLoading } = useSelector((state) => state);
 
   useEffect(() => {
-
     const recipeList = getRecipesApi('pizza');
-    
+
     recipeList
       .then((recipes) => {
         if (!recipes) {
@@ -32,8 +29,7 @@ const MainSection = () => {
         const recipeList = recipes.map((recpieItem) => recpieItem.recipe);
 
         dispatch(getRecipeAction(recipeList));
-        dispatch(setOriginalRecipes(recipeList))
-
+        dispatch(setOriginalRecipes(recipeList));
       })
       .catch((error) => {
         console.log(error);
@@ -42,8 +38,6 @@ const MainSection = () => {
         dispatch(setIsLoadingAction(false));
       });
   }, []);
-
-
 
   return (
     <Container className="MainSectionContainer" maxWidth="xl">
@@ -58,7 +52,7 @@ const MainSection = () => {
       )}
       <RecipesSection />
     </Container>
-  )
-}
+  );
+};
 
 export default MainSection;

@@ -28,7 +28,7 @@ export default function BasicModal(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-     <img src={props.imageUrl} alt="" />
+          <img src={props.imageUrl} alt="" />
         </Box>
       </Modal>
     </div>

@@ -1,22 +1,13 @@
-.MainSectionContainer{
+.MainSectionContainer {
+  padding: 5rem 0;
+  background-color: #e6e6fa25;
 
-
-padding: 5rem 0;
-background-color:#e6e6fa25 ;
-
-
-
-
-
-.InfoContainer {
+  .InfoContainer {
     display: flex;
     gap: 5rem;
-}
+  }
 
-.spinner{
-text-align: center;
-
-
-}
-
+  .spinner {
+    text-align: center;
+  }
 }

@@ -1,24 +1,16 @@
-import React from 'react'
-import CardGrid from '../CardGrid/CardGrid'
-import ImageSection from '../ImageSection/ImageSection'
-import RecpieInfo from '../RecpieInfo/RecpieInfo'
-
-
+import React from 'react';
+import CardGrid from '../CardGrid/CardGrid';
+import ImageSection from '../ImageSection/ImageSection';
+import RecpieInfo from '../RecpieInfo/RecpieInfo';
 
 const RecipesSection = () => {
-
-
-
   return (
-
     <div className="InfoContainer">
-    <CardGrid />
-    <ImageSection />
-    <RecpieInfo />
+      <CardGrid />
+      <ImageSection />
+      <RecpieInfo />
+    </div>
+  );
+};
 
-
-  </div>
-  )
-}
-
-export default RecipesSection
+export default RecipesSection;

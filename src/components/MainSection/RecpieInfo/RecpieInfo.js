@@ -3,8 +3,6 @@ import { useSelector } from 'react-redux';
 import './recpieInfo.scss';
 
 const RecpieInfo = () => {
-
-  
   const recipe = useSelector((state) => state.choosenRecipe);
 
   if (!recipe) {

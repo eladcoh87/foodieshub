@@ -1,35 +1,21 @@
-.InputTextContainer{
+.InputTextContainer {
+  display: flex;
+  justify-content: flex-end;
 
+  margin-bottom: 4rem;
 
-display: flex;
-justify-content: flex-end;
+  .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 
-margin-bottom: 4rem;
+    .MuiSvgIcon-root {
+      font-size: 2rem;
+    }
 
-.search-btn{
-
-display: flex;
-align-items: center;
-justify-content: center;
-justify-items: center;
-
-
-.MuiSvgIcon-root{
-
-font-size: 2rem ;
-
-}
-
-
-
-.css-155nyw6-MuiButton-endIcon{
-
-    margin: 0;
-
-}
-
-}
-
-
-
+    .css-155nyw6-MuiButton-endIcon {
+      margin: 0;
+    }
+  }
 }

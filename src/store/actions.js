@@ -19,8 +19,6 @@ export const setChoosenRecipe = (id) => {
   };
 };
 
-
-
 export const addToLastSearch = (id) => {
   return {
     type: 'ADD_TO_LAST_SEARCH',
@@ -28,11 +26,9 @@ export const addToLastSearch = (id) => {
   };
 };
 
-
 export const setOriginalRecipes = (recpies) => {
   return {
     type: 'SET_ORIGINAL_RECIPE',
     payload: recpies,
   };
 };
-

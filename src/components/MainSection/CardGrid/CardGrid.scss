@@ -1,31 +1,26 @@
+.cardGridContainer {
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
 
-.cardGridContainer{
-    --scrollbarBG: #CFD8DC;
-    --thumbBG: #90A4AE;
+  width: 25%;
 
-width: 25%;
+  overflow-y: scroll;
+  height: 110vh;
 
-overflow-y: scroll;
-height: 110vh;
-
-&::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     width: 11px;
-
   }
 
-scrollbar-width: thin;
+  scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-
 
   &::-webkit-scrollbar-track {
     background: var(--scrollbarBG);
   }
 
-
-&::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG) ;
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
     border-radius: 6px;
     border: 3px solid var(--scrollbarBG);
   }
-  
 }

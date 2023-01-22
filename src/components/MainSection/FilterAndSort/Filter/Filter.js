@@ -5,17 +5,21 @@ import { getRecipeAction } from '../../../../store/actions';
 const Filter = () => {
   const recpiesList = useSelector((state) => state.recpiesList);
   const originalSearchList = useSelector((state) => state.originalSearchList);
-  
+
   const dispatch = useDispatch();
 
   const handleOnBlur = (event) => {
-
-
-    if (event.target.value === '' && recpiesList.length === originalSearchList.length) {
+    if (
+      event.target.value === '' &&
+      recpiesList.length === originalSearchList.length
+    ) {
       return;
     }
 
-    if (event.target.value.trim() === '' && recpiesList.length !== originalSearchList.length) {
+    if (
+      event.target.value.trim() === '' &&
+      recpiesList.length !== originalSearchList.length
+    ) {
       dispatch(getRecipeAction(originalSearchList));
       return;
     }
@@ -23,11 +27,9 @@ const Filter = () => {
     const value = event.target.value.toLowerCase();
 
     const filteredList = originalSearchList.filter((recpie) => {
-
       const ingredintText = recpie.ingredients.map((ingredient) =>
         ingredient.text.toLowerCase()
       );
-
 
       let ingredintFlag = false;
 
@@ -44,17 +46,11 @@ const Filter = () => {
       return ingredintFlag;
     });
 
-
-
     if (filteredList.length > 0) {
       dispatch(getRecipeAction(filteredList));
     }
+  };
 
-  }
-
-
-
-  
   return (
     <div>
       <TextField

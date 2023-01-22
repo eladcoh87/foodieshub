@@ -1,26 +1,16 @@
-.RecipeCardContainer{
+.RecipeCardContainer {
+  .css-o69gx8-MuiCardMedia-root {
+    height: 7rem;
+    object-fit: cover;
+  }
 
+  .CardContainer {
+    width: 160px;
+    border-radius: 35px;
+    height: 200px;
 
-    .css-o69gx8-MuiCardMedia-root{
-
-            height: 7rem;
-            object-fit: cover;
-
+    h3 {
+      font-size: 0.8rem;
     }
-
-
-.CardContainer{
-
-
-width: 160px;
-border-radius: 35px;
-height: 200px;
-
-h3{
-
-    font-size: 0.8rem;
-}
-
-}
-
+  }
 }
