@@ -8,7 +8,7 @@
 
 ## Live Demo 🌐 :
 
-https://reactflix-movie-app-redux-imdb-api.vercel.app/
+https://foodieshub.vercel.app
 
 
 ## Install 📔
